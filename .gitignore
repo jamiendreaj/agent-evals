@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.local
+.DS_Store
+
+# Run logs. Baselines are committed on purpose; raw runs are not.
+runs/

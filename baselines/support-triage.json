@@ -1,0 +1,82 @@
+{
+  "suite": "support-triage",
+  "at": "2026-10-26T08:39:44.689Z",
+  "passed": 5,
+  "total": 6,
+  "byCheck": {
+    "finished": {
+      "pass": 6,
+      "total": 6
+    },
+    "notEmpty": {
+      "pass": 6,
+      "total": 6
+    },
+    "contains": {
+      "pass": 6,
+      "total": 6
+    },
+    "json": {
+      "pass": 7,
+      "total": 7
+    },
+    "latency": {
+      "pass": 6,
+      "total": 6
+    },
+    "absent": {
+      "pass": 1,
+      "total": 1
+    },
+    "matches": {
+      "pass": 0,
+      "total": 1
+    }
+  },
+  "byTag": {
+    "priority": {
+      "pass": 3,
+      "total": 3
+    },
+    "billing": {
+      "pass": 2,
+      "total": 2
+    },
+    "escalation": {
+      "pass": 0,
+      "total": 1
+    },
+    "shape": {
+      "pass": 1,
+      "total": 1
+    }
+  },
+  "cases": {
+    "urgent.outage": {
+      "pass": true,
+      "failed": []
+    },
+    "urgent.double-charge": {
+      "pass": true,
+      "failed": []
+    },
+    "routine.how-to": {
+      "pass": true,
+      "failed": []
+    },
+    "routing.invoice": {
+      "pass": true,
+      "failed": []
+    },
+    "escalation.legal": {
+      "pass": false,
+      "failed": [
+        "matches:\"needs_human\"\\s*:\\s*true"
+      ]
+    },
+    "shape.always-json": {
+      "pass": true,
+      "failed": []
+    }
+  }
+}

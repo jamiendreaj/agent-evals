@@ -1,0 +1,37 @@
+{
+  "name": "agent-evals",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "An evaluation harness for LLM agents: code graders, a calibrated model judge, and a baseline comparison that says whether a change actually helped.",
+  "bin": {
+    "agent-evals": "./bin/evals.js"
+  },
+  "scripts": {
+    "test": "node --test \"src/*.test.js\"",
+    "example": "node examples/sentiment.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0"
+  },
+  "license": "MIT",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./graders": "./src/graders.js",
+    "./judge": "./src/judge.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md"
+  ],
+  "keywords": [
+    "llm",
+    "agent",
+    "evals",
+    "evaluation",
+    "anthropic",
+    "claude",
+    "testing"
+  ]
+}

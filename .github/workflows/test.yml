@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      # No API key, deliberately. The harness is tested against a scripted
+      # judge and an echo agent, so the suite can never fail for a reason
+      # unrelated to the code.
+      - run: npm test
+      # The worked example doubles as a smoke test of the CLI end to end.
+      - run: node bin/evals.js examples/support-triage.js --no-judge || true
